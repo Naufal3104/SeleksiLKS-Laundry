@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{17DCEDB2-4B77-4700-9711-3E72A2C81829}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>forlks</RootNamespace>
+    <AssemblyName>forlks</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="koneksi.cs" />
+    <Compile Include="layanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="layanan.Designer.cs">
+      <DependentUpon>layanan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lihatransaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lihatransaksi.Designer.cs">
+      <DependentUpon>lihatransaksi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menuutama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuutama.Designer.cs">
+      <DependentUpon>menuutama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menuutamakasir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuutamakasir.Designer.cs">
+      <DependentUpon>menuutamakasir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="paket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="paket.Designer.cs">
+      <DependentUpon>paket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pegawai.Designer.cs">
+      <DependentUpon>pegawai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pelanggan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pelanggan.Designer.cs">
+      <DependentUpon>pelanggan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="transaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="transaksi.Designer.cs">
+      <DependentUpon>transaksi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="transaksipaket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="transaksipaket.Designer.cs">
+      <DependentUpon>transaksipaket.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="layanan.resx">
+      <DependentUpon>layanan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lihatransaksi.resx">
+      <DependentUpon>lihatransaksi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuutama.resx">
+      <DependentUpon>menuutama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="paket.resx">
+      <DependentUpon>paket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pegawai.resx">
+      <DependentUpon>pegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pelanggan.resx">
+      <DependentUpon>pelanggan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="transaksi.resx">
+      <DependentUpon>transaksi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="transaksipaket.resx">
+      <DependentUpon>transaksipaket.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
